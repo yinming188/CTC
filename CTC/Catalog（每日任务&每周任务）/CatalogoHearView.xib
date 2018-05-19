@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="CatalogoHearView" customModule="CTC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4o-dO-O33">
+                    <rect key="frame" x="64" y="10" width="62" height="30"/>
+                    <state key="normal" title="限时任务">
+                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="left:" destination="iN0-l3-epB" eventType="touchUpInside" id="WXr-5s-YfD"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uma-Pa-lsE">
+                    <rect key="frame" x="333" y="10" width="62" height="30"/>
+                    <state key="normal" title="周末任务">
+                        <color key="titleColor" red="0.58039215686274503" green="0.58039215686274503" blue="0.58039215686274503" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="right:" destination="iN0-l3-epB" eventType="touchUpInside" id="wPz-h6-yDQ"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b4v-wr-lrG">
+                    <rect key="frame" x="73" y="45" width="45" height="2"/>
+                    <color key="backgroundColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="2" id="FZg-Zj-0eh"/>
+                        <constraint firstAttribute="width" constant="45" id="g4U-uh-doV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Uma-Pa-lsE" secondAttribute="trailing" constant="64" id="0rn-Ey-glw"/>
+                <constraint firstItem="b4v-wr-lrG" firstAttribute="centerX" secondItem="F4o-dO-O33" secondAttribute="centerX" priority="900" id="CCy-oI-s2z"/>
+                <constraint firstItem="Uma-Pa-lsE" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="G2u-hT-yJE"/>
+                <constraint firstItem="F4o-dO-O33" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="WRI-n8-lYr"/>
+                <constraint firstItem="F4o-dO-O33" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="64" id="qd2-r8-8sX"/>
+                <constraint firstItem="b4v-wr-lrG" firstAttribute="top" secondItem="F4o-dO-O33" secondAttribute="bottom" constant="5" id="sDL-SP-Bnb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="leftBT" destination="F4o-dO-O33" id="VUK-Ot-aLd"/>
+                <outlet property="leftSlipView" destination="b4v-wr-lrG" id="P3y-dX-c5a"/>
+                <outlet property="rightBT" destination="Uma-Pa-lsE" id="ZHd-LP-1cQ"/>
+            </connections>
+            <point key="canvasLocation" x="484.5" y="-159.5"/>
+        </view>
+    </objects>
+</document>

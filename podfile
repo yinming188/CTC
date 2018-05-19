@@ -1,0 +1,7 @@
+platform :ios, '9.0'
+use_frameworks!
+
+target 'CTC' do
+pod 'Kingfisher', '~> 4.7.0'
+  pod 'WechatOpenSDK'
+end

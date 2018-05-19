@@ -9,14 +9,44 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate,WXApiDelegate{
 
     var window: UIWindow?
 
-
+    let rootDistance:CGFloat = 150.0
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        window?.makeKeyAndVisible()
+        
+        let v = RootView.init(frame: UIScreen.main.bounds)
+        
+        v.rootViewWidth = UIScreen.main.bounds.width - rootDistance
+        
+        v.backgroundColor = UIColor.init(red: 255, green: 0, blue: 0, alpha: 1)
+        
+        let home = HomeViewController.init(nibName: "HomeViewController", bundle: nil)
+        
+        home.title = "1231231"
+        
+        let rootnavi = SideSlipNavi.init(rootViewController: home, self, v, rootDistance)
+        
+        window?.rootViewController = rootnavi
+        
+        //Weixin
+        WXApi.registerApp("")
+        
         return true
+    }
+    
+    @objc func gogo(){
+        
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return WXApi.handleOpen(url, delegate: self)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

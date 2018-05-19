@@ -1,0 +1,20 @@
+PODS:
+  - Kingfisher (4.7.0)
+  - WechatOpenSDK (1.8.2)
+
+DEPENDENCIES:
+  - Kingfisher (~> 4.7.0)
+  - WechatOpenSDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Kingfisher
+    - WechatOpenSDK
+
+SPEC CHECKSUMS:
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+
+PODFILE CHECKSUM: 9656a33e49f317b481e3b7b401f7d3eef6cbe35b
+
+COCOAPODS: 1.5.2

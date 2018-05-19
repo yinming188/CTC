@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RootViewTableHeader" customModule="CTC" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="350" height="184"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menu_user_bg" translatesAutoresizingMaskIntoConstraints="NO" id="bag-hI-dow">
+                    <rect key="frame" x="0.0" y="0.0" width="350" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="T2z-u0-L5S"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYo-Hh-qLg">
+                    <rect key="frame" x="24" y="89.5" width="81" height="81"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="81" id="674-mw-m1Y"/>
+                        <constraint firstAttribute="width" constant="81" id="975-uc-BeJ"/>
+                    </constraints>
+                    <state key="normal" image="menu_icon_user"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="FYo-Hh-qLg" firstAttribute="top" secondItem="bag-hI-dow" secondAttribute="bottom" constant="-40.5" id="EO9-tL-Jj1"/>
+                <constraint firstItem="bag-hI-dow" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="Nyy-mE-QhH"/>
+                <constraint firstItem="FYo-Hh-qLg" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="izn-z2-zfI"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="bag-hI-dow" secondAttribute="trailing" id="qPS-ZD-qOQ"/>
+                <constraint firstItem="bag-hI-dow" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vuC-zJ-Njm"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="headerButton" destination="FYo-Hh-qLg" id="q51-WK-nZf"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="-189"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="menu_icon_user" width="97" height="97"/>
+        <image name="menu_user_bg" width="750" height="260"/>
+    </resources>
+</document>
